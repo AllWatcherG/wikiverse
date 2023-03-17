@@ -18,11 +18,11 @@ export const PagesList = (props) => {
 		}
 	</>
 	} else if(props.pageView === 2){
-		console.log(props)
-		console.log(props.pages)
 		return <>
 			<Page page={props.pages[0]} pageView ={props.pageView}/>
 			<button onClick={()=> props.goBackToHome()}>Go back to Home</button>	
+			{console.log(props.pages[0].slug)}
+			<button onClick={()=> props.deletePage(props.pages[0].slug)}>Delete</button>
 		</>
 	}
 	
