@@ -10,11 +10,12 @@ export const Page = (props) => {
     </>
   } else if(props.pageView === 2){
     return <>
+      {console.log(props)}
       <h3>{props.page.title}</h3>
-      <p>Author:</p>
-      <p>Published:</p>
+      <p>Author: {props.page.author.name}</p>
+      <p>Published: {props.page.createdAt}</p>
       <p>{props.page.content}</p>
-      <p>Tags:</p>
+      <p>Tags: {props.page.tags[0].name}</p>
       <p></p>
     </>
   }
